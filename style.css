@@ -1,0 +1,449 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+*  {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(to right, #ffffff, #ffffff);
+  }
+
+.container {
+    max-width: 1890px;
+    margin: 0 auto;
+}
+
+
+.s-a hr {
+    margin-top: 3%; /* Ajusta este valor según lo que necesites */
+  }
+
+
+/* Sección B: Categorías de la tienda en fila */
+.seccion-b {
+    display: flex;
+    flex-wrap: nowrap;
+    overflow: auto;
+    margin-top: 5%
+}
+
+h5 {
+    font-family: 'Poppins', sans-serif;
+    color: rgb(0, 0, 0);
+    font-size: 1.1rem
+
+}
+
+.swiper-container {
+    display: flex;
+}
+
+.swiper-slide {
+    flex: 0 0 auto;
+    text-align: center;
+    padding-bottom: 50px;
+}
+
+.agregar-carrito img {
+    width: 20px;
+    height: 20px;
+    fill: #007bff;
+    position: relative;
+    left: 10%;
+}
+
+.agregar-carrito img:hover {
+    fill: #ff4500;
+}
+
+/* Header y Menú */
+.header {
+    position: relative;
+}
+
+ /* Submenú "Días Especiales!" */
+ .submenu1 {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 100%;
+    background-color: #fff;
+    padding: 10px 0;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.15);
+    z-index: 100;
+  }
+  .dropdown-submenu1:hover > .submenu1 {
+    display: block;
+  }
+
+.menu {
+    position: absolute;
+    top: 90%;
+    left: 0;
+    right: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 100000;
+}
+
+.navbar ul li {
+    float: left;
+    position: relative;
+    display: flex;
+    
+}
+
+.navbar ul li a {
+    font-size: 20px;
+    padding: 20px;
+    color: #a392a0;
+    display: flex;
+    font-weight: 750;
+}
+
+.navbar ul li a:hover {
+    color: #72727b;
+}
+
+.dropdown {
+    position: relative;
+}
+
+
+.contenido-dropdown {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #ffffff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+}
+
+.dropdown:hover .contenido-dropdown {
+    display: block;
+}
+
+/* Para pantallas grandes (por ejemplo, 768px o más) */
+@media (min-width: 768px) {
+    #menu {
+      display: none;
+    }
+    
+  }
+
+.menu-icono {
+    width: 25px;
+}
+
+.menu label {
+    cursor: pointer; 
+    display: none;
+}
+
+
+/* Carrito de Compras */
+.submenu {
+    position: relative;
+}
+
+#img-carrito {
+    width: 30px;
+    height: 30px;
+    margin-top: -100%;
+    margin-left: -250%;
+}
+
+.submenu #carrito {
+    display: none;
+}
+
+.submenu:hover #carrito {
+    display: block;
+    position: absolute;
+    right: 0;
+    backdrop-filter: blur(10px);
+    top: 100%; 
+    z-index: 1;
+    background-color: #37353976;
+    padding: 20px;
+    min-width: 400px; 
+    min-height: 400px;
+    margin-top: 100%;
+}
+
+table {
+    width: 100%;
+}
+
+th {
+    color: #dfdde0;
+}
+
+td {
+    color: #dfdde0;
+}
+
+.borrar {
+    background-color: #e45d34;
+    border-radius: 50%;
+    padding: 5px 10px;
+    text-decoration: none;
+    color: #dfdde0;
+    font-weight: 800;
+}
+
+/* Header Content */
+.header-content {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 0.5%;
+    margin-top: 0.5%; /* Reducción del margen superior */
+    position: relative;
+    z-index: 5;     
+}
+
+
+.header-content h1 {
+    font-size: 100px;
+    color: #c71400;
+    font-weight: 10px;
+    margin: 10px ;
+
+
+}
+
+.header-content h1 span {
+    color: #1ea5e0;
+    font-size: 30px;
+}
+
+.botons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin: 20px 0;
+}
+
+.btn-1 {
+    display: inline-block;
+    width: 200px;
+    padding: 13px 0;
+    border-radius: 25px;
+    color: #dfdde0;
+    text-transform: uppercase;
+    background-color: #7e7674;  /* Puedes ajustar el color de fondo */
+    transition: background-color 0.3s ease;
+}
+
+.btn-1:hover {
+    background-color: #e45d34;
+}
+
+.btn-2 {
+    display: inline-block
+}
+
+.btn-2:hover {
+    background-color: #f78b6b;
+}
+
+/* Redes Sociales en Header */
+.socials-1 {
+    position: absolute;
+    top: 100%;
+    left: 50px;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.socials-1 img {
+    width: 20px;
+    height: 20px;
+}
+
+/* Cotillón Producto */
+.Cotillón h3 {
+    text-align: left;
+    margin-left: 65px;
+}
+
+/* Swiper */
+.swiper {
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+    position: relative;
+}
+
+.swiper-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+/* Establecer tamaño correcto para cada slide */
+.swiper-slide {
+    display: flex;
+    justify-content: center; /* Centra el contenido dentro del slide */
+    align-items: center;
+    text-align: center; /* Centra el texto */
+  }
+
+.swiper-button-prev::after {
+    font-size: 25px;
+    
+}
+
+.swiper-button-next::after {
+    font-size: 25px;
+}
+
+.swiper-button-prev {
+    color: #f52905;
+    left: 10px !important; 
+
+}
+
+.swiper-button-next {
+    color: #f52905;
+    right: 10px !important;
+}
+
+.swiper-pagination-bullet {
+    background-color: #dfdddf;
+    opacity: 1;
+    top: 50px;
+}
+
+.swiper-pagination-bullet-active {
+    background-color: #e45d34;
+}
+
+.precio {
+    color: #e45d34;
+    margin-left: 1px;
+
+}
+
+/* Responsive */
+@media (max-width: 991px) {
+    .menu {
+        padding: 1%;
+    }
+    
+    .menu label {
+        display: initial;
+    }
+    
+    .menu .navbar {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background-color: #303030;
+        display: none;
+    }
+    
+    .logo {
+        display: none;
+    }
+    
+    .navbar ul li {
+        width: 100%;
+    }
+    
+    #menu:checked ~ .navbar {
+        display: initial;
+    }
+    
+    .header-content {
+        margin-top: 1%;
+    }
+    
+    .header-content h1 {
+        font-size: 2.5rem; /* o 40px, según prefieras */
+        margin: 0.5% 0;
+    }
+    
+    .socials-1 {
+        display: none;
+    }
+
+    #menu:checked ~ .navbar{
+        display: initial;
+    }
+    
+}
+
+/* ================== Estilos para el Footer ================== */
+.footer {
+    background-color: #ffffff;
+    color: #646464;
+    padding: 40px 20px;
+    margin-top: 40px;
+}
+
+.footer-links {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.footer-column {
+    flex: 1;
+    min-width: 200px;
+    margin: 20px;
+}
+
+.footer-column h3 {
+    font-size: 18px;
+    margin-bottom: 15px;
+}
+
+.footer-column ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-column ul li {
+    margin-bottom: 10px;
+}
+
+.footer-column ul li a {
+    color: #818181;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-column ul li a:hover {
+    text-decoration: underline;
+    color: #e45d34;
+}
+
+.socials-2 {
+    display: flex;
+    gap: 10px;
+}
+
+.socials-2 a img {
+    width: 24px;
+    height: 24px;
+}
+
+.footer-bottom {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 14px;
+}
